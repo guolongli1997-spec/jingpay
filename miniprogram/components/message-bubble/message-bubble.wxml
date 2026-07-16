@@ -1,0 +1,8 @@
+<!-- JINGPAY — Chat Message Bubble -->
+<view class="bubble-wrapper {{isUser ? 'user' : 'ai'}}">
+  <image class="bubble-avatar" src="{{isUser ? '/images/user-avatar.png' : '/images/bot-avatar.png'}}" />
+  <view class="bubble-content">
+    <view class="bubble-name">{{isUser ? '我' : 'Jing-AI'}}</view>
+    <view class="bubble-text">{{content}}</view>
+  </view>
+</view>

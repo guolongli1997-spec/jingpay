@@ -1,0 +1,50 @@
+/* Message Bubble */
+.bubble-wrapper {
+  display: flex;
+  margin-bottom: 24rpx;
+  padding: 0 32rpx;
+  gap: 16rpx;
+}
+
+.bubble-wrapper.user {
+  flex-direction: row-reverse;
+}
+
+.bubble-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8rpx;
+}
+
+.bubble-content {
+  max-width: 70%;
+  padding: 20rpx 28rpx;
+  border-radius: var(--radius-md);
+  word-break: break-all;
+}
+
+.user .bubble-content {
+  background: #EDF5FE;
+  border-top-right-radius: 4rpx;
+}
+
+.ai .bubble-content {
+  background: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+  border-top-left-radius: 4rpx;
+}
+
+.bubble-name {
+  font-size: 22rpx;
+  color: var(--text-muted);
+  margin-bottom: 8rpx;
+  font-weight: 600;
+}
+
+.bubble-text {
+  font-size: 28rpx;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
