@@ -1,0 +1,51 @@
+<!-- JINGPAY — Home Page -->
+<view class="page-home">
+  <!-- Custom Header -->
+  <custom-header title="Jingpay" bg-color="#1A73E8" />
+
+  <!-- Status Card -->
+  <view class="card status-card">
+    <view class="status-row">
+      <view class="status-dot {{botStatus}}"></view>
+      <text class="status-text">{{botStatus === 'online' ? 'AI 在线' : 'AI 离线'}}</text>
+    </view>
+    <text class="status-desc">
+      {{botStatus === 'online' ? 'Jing-AI 已就绪，随时为您服务' : '正在连接服务器，请稍后...'}}
+    </text>
+  </view>
+
+  <!-- Quick Actions -->
+  <view class="card actions-card">
+    <text class="section-title">快捷功能</text>
+
+    <view class="action-btn" bindtap="goToChat">
+      <image src="/images/chat-icon.png" class="action-icon" />
+      <text>开始聊天</text>
+    </view>
+
+    <view class="action-btn" bindtap="goToConfig">
+      <image src="/images/config-icon.png" class="action-icon" />
+      <text>机器人配置</text>
+    </view>
+
+    <view class="action-btn" bindtap="goToHistory">
+      <image src="/images/history-icon.png" class="action-icon" />
+      <text>历史记录</text>
+    </view>
+  </view>
+
+  <!-- Bot Info -->
+  <view class="card info-card">
+    <text class="section-title">当前模型</text>
+    <view class="model-tag">{{botConfig.model}}</view>
+    <text class="info-text">语言：{{botConfig.language}} | 风格：{{botConfig.tone}}</text>
+  </view>
+
+  <!-- Toggle Menu -->
+  <view class="menu-toggle" bindtap="toggleMenu">
+    <image src="/images/menu.png" class="toggle-icon" />
+  </view>
+
+  <!-- Side Menu -->
+  <side-menu show="{{menuOpen}}" bind:close="closeMenu" bind:navigate="onNavigate" />
+</view>
