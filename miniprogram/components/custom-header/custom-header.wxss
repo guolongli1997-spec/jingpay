@@ -1,0 +1,34 @@
+/* Custom Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32rpx;
+  box-shadow: var(--shadow-md);
+}
+
+.header-left, .header-right {
+  width: 64rpx;
+  height: 64rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon, .new-icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.header-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+  letter-spacing: 2rpx;
+}

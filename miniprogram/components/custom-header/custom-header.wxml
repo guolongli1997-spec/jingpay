@@ -1,0 +1,10 @@
+<!-- JINGPAY — Custom Fixed Header -->
+<view class="header" style="background: {{bgColor}};">
+  <view class="header-left" bindtap="onMenuTap">
+    <image class="menu-icon" src="/images/menu.png" mode="aspectFit" />
+  </view>
+  <view class="header-title">{{title}}</view>
+  <view class="header-right" bindtap="onNewChat">
+    <image class="new-icon" src="/images/new-chat.png" mode="aspectFit" />
+  </view>
+</view>
