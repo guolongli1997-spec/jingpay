@@ -1,0 +1,140 @@
+/* ========================================
+   JINGPAY (জিংপে) — Global Theme & Variables
+   ======================================== */
+
+/* 🎨 Brand Colors */
+page {
+  --primary: #1A73E8;
+  --primary-dark: #1557B0;
+  --primary-light: #E8F0FE;
+  --accent: #34A853;
+  --accent-dark: #2D8F47;
+  --danger: #EA4335;
+  --warning: #FBBC04;
+  --bg-main: #F0F4F8;
+  --bg-card: #FFFFFF;
+  --bg-chat: #F8FAFF;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+  --text-muted: #9CA3AF;
+  --border: #E5E7EB;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --radius-sm: 8rpx;
+  --radius-md: 16rpx;
+  --radius-lg: 24rpx;
+  --radius-xl: 32rpx;
+  --radius-pill: 999rpx;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+               'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 28rpx;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  box-sizing: border-box;
+}
+
+/* 🔧 Utility Classes */
+.container {
+  padding: 32rpx;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+}
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flex-end { justify-content: flex-end; }
+.flex-1 { flex: 1; }
+.gap-sm { gap: 16rpx; }
+.gap-md { gap: 24rpx; }
+.gap-lg { gap: 32rpx; }
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-center { text-align: center; }
+.text-bold { font-weight: bold; }
+
+.btn-primary {
+  background: var(--primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 16rpx 48rpx;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.btn-pill {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 2rpx solid var(--primary);
+  border-radius: var(--radius-pill);
+  padding: 12rpx 32rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+
+.btn-thin-pill {
+  background: transparent;
+  color: var(--primary);
+  border: 1.5rpx solid var(--primary);
+  border-radius: var(--radius-pill);
+  padding: 8rpx 24rpx;
+  font-size: 22rpx;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.status-online {
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  background: var(--accent);
+  border-radius: 50%;
+  margin-right: 8rpx;
+  animation: pulse 2s infinite;
+}
+
+.status-offline {
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  background: var(--danger);
+  border-radius: 50%;
+  margin-right: 8rpx;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4rpx; }
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4rpx;
+}
+
+/* Safe Area for notch devices */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
