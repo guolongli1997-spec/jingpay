@@ -1,0 +1,4 @@
+<!-- JINGPAY — Thin Pill Button -->
+<view class="pill-btn {{active ? 'active' : ''}}" bindtap="onTap">
+  {{label}}
+</view>

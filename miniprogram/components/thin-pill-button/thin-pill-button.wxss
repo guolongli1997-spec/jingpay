@@ -1,0 +1,17 @@
+/* Thin Pill Button */
+.pill-btn {
+  display: inline-block;
+  padding: 8rpx 28rpx;
+  border: 1.5rpx solid var(--primary);
+  border-radius: var(--radius-pill);
+  font-size: 22rpx;
+  font-weight: 500;
+  color: var(--primary);
+  background: transparent;
+  transition: all 0.2s;
+}
+
+.pill-btn.active {
+  background: var(--primary);
+  color: #FFFFFF;
+}
