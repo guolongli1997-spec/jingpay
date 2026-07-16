@@ -1,0 +1,48 @@
+<!-- JINGPAY — Main Chat Page -->
+<view class="page-chat">
+  <!-- Custom Header -->
+  <custom-header title="Jing-AI 聊天" bg-color="#1A73E8" bind:menutap="toggleMenu" bind:newchat="newChat" />
+
+  <!-- Feature Pills -->
+  <scroll-view class="pills-scroll" scroll-x enable-flex>
+    <view class="pill-item" wx:for="{{features}}" wx:key="label" bindtap="selectFeature" data-index="{{index}}">
+      <thin-pill-button label="{{item.label}}" active="{{item.active}}" />
+    </view>
+  </scroll-view>
+
+  <!-- Chat Messages -->
+  <scroll-view
+    class="chat-scroll"
+    scroll-y
+    scroll-into-view="{{scrollToMessage}}"
+    scroll-with-animation
+    enhanced
+    show-scrollbar="{{false}}"
+  >
+    <view class="chat-body">
+      <view wx:if="{{messages.length === 0}}" class="empty-state">
+        <image src="/images/bot-welcome.png" class="welcome-img" />
+        <text class="welcome-text">你好！我是 Jing-AI，有什么可以帮你？</text>
+      </view>
+
+      <message-bubble
+        wx:for="{{messages}}"
+        wx:key="id"
+        content="{{item.content}}"
+        is-user="{{item.isUser}}"
+      />
+
+      <view wx:if="{{isTyping}}" class="typing-indicator">
+        <view class="typing-dot"></view>
+        <view class="typing-dot"></view>
+        <view class="typing-dot"></view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- Input Bar -->
+  <input-bar bind:send="onSendMessage" />
+
+  <!-- Side Menu -->
+  <side-menu show="{{menuOpen}}" bind:close="closeMenu" bind:navigate="onNavigate" />
+</view>
