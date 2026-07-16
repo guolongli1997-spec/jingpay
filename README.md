@@ -56,3 +56,6 @@ cd miniprogram
 cd ../cloud
 npm install
 npx wrangler deploy
+
+
+npm init -y
