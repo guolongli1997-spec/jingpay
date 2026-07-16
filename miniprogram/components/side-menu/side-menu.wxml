@@ -1,0 +1,38 @@
+<!-- JINGPAY — Slide-in Side Menu -->
+<view class="menu-overlay" wx:if="{{show}}" bindtap="onClose" style="opacity:{{overlayOpacity}};">
+</view>
+<view class="menu-panel" style="transform: translateX({{show ? '0' : '-100%'}});">
+  <view class="menu-header">
+    <image class="avatar" src="/images/avatar.png" mode="aspectFill" />
+    <text class="username">Jingpay 用户</text>
+  </view>
+
+  <view class="menu-item" bindtap="onNavigate" data-page="index">
+    <image src="/images/home-menu.png" class="menu-item-icon" />
+    <text>首页</text>
+  </view>
+
+  <view class="menu-item" bindtap="onNavigate" data-page="chat">
+    <image src="/images/chat-menu.png" class="menu-item-icon" />
+    <text>AI 聊天</text>
+  </view>
+
+  <view class="menu-item" bindtap="onNavigate" data-page="config">
+    <image src="/images/config-menu.png" class="menu-item-icon" />
+    <text>机器人配置</text>
+  </view>
+
+  <view class="menu-item" bindtap="onNavigate" data-page="history">
+    <image src="/images/history-menu.png" class="menu-item-icon" />
+    <text>历史记录</text>
+  </view>
+
+  <view class="menu-item" bindtap="onNavigate" data-page="about">
+    <image src="/images/about-menu.png" class="menu-item-icon" />
+    <text>关于</text>
+  </view>
+
+  <view class="menu-footer">
+    <text class="version">v1.0.0</text>
+  </view>
+</view>
