@@ -1,1 +1,19 @@
 
+name = "jingpay"
+main = "src/index.ts"
+compatibility_date = "2026-07-16"
+
+# Workers AI binding
+[ai]
+binding = "jing-ai"
+
+# D1 database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "jing-d1"
+database_id = "c9327f87-d9b2-421b-8891-d88e21732443"
+
+# KV namespace binding
+[[kv_namespaces]]
+binding = "KV_BINDING"
+id = "663113bc03854fbaad5a42905c8789ec"
