@@ -1,0 +1,19 @@
+<!-- JINGPAY — Chat Input Bar -->
+<view class="input-bar">
+  <view class="input-wrapper">
+    <input
+      class="chat-input"
+      type="text"
+      placeholder="输入消息..."
+      placeholder-class="placeholder"
+      value="{{inputValue}}"
+      bindinput="onInput"
+      bindconfirm="onSend"
+      confirm-type="send"
+      adjust-position="{{true}}"
+    />
+  </view>
+  <view class="send-btn {{inputValue ? 'active' : ''}}" bindtap="onSend">
+    <image src="/images/send.png" class="send-icon" />
+  </view>
+</view>
