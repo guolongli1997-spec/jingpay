@@ -1,0 +1,73 @@
+/* Side Menu */
+.menu-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  transition: opacity 0.3s;
+}
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 560rpx;
+  background: #FFFFFF;
+  z-index: 1001;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+}
+
+.menu-header {
+  padding: 80rpx 48rpx 48rpx;
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  border-bottom: 1rpx solid var(--border);
+}
+
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  border: 4rpx solid var(--primary);
+}
+
+.username {
+  font-size: 34rpx;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 32rpx 48rpx;
+  gap: 24rpx;
+  color: var(--text-primary);
+  font-size: 30rpx;
+  transition: background 0.2s;
+}
+
+.menu-item:active {
+  background: var(--primary-light);
+}
+
+.menu-item-icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.menu-footer {
+  margin-top: auto;
+  padding: 32rpx 48rpx;
+  border-top: 1rpx solid var(--border);
+}
+
+.version {
+  font-size: 24rpx;
+  color: var(--text-muted);
+}
